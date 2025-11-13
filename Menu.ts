@@ -39,7 +39,6 @@ export function main(): void {
     }
 
     readlineSync.question("\nPressione Enter para continuar...");
-
   } while (opcao !== 0);
 }
 
