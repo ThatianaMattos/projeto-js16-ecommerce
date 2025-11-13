@@ -70,9 +70,7 @@ export function main(): void {
 
       case 4: {
         console.log("\nExcluir Curso\n");
-        const id = readlineSync.questionInt(
-          "Id do curso que deseja excluir: "
-        );
+        const id = readlineSync.questionInt("Id do curso que deseja excluir: ");
 
         cursos.excluir(id);
 
