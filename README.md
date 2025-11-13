@@ -4,32 +4,32 @@ Sistema de console em TypeScript para gerenciar um pequeno e commerce de cursos.
 
 O projeto foi desenvolvido seguindo as etapas do bloco:
 
-- Menu  
-- Model e Repository  
-- Controller e Collections  
-- Features extras  
+- Menu
+- Model e Repository
+- Controller e Collections
+- Features extras
 
 ---
 
 ## Funcionalidades
 
-- Cadastrar curso  
-- Listar cursos  
-- Atualizar curso  
-- Excluir curso  
-- Buscar curso por nome  
-- Aplicar desconto em um curso pelo id  
-- Gerar relatório de cursos  
+- Cadastrar curso
+- Listar cursos
+- Atualizar curso
+- Excluir curso
+- Buscar curso por nome
+- Aplicar desconto em um curso pelo id
+- Gerar relatório de cursos
 
 ---
 
 ## Tecnologias utilizadas
 
-- Node.js  
-- TypeScript  
-- readline-sync  
-- Paradigma de programação orientada a objetos  
-- Collections com array  
+- Node.js
+- TypeScript
+- readline-sync
+- Paradigma de programação orientada a objetos
+- Collections com array
 
 ---
 
