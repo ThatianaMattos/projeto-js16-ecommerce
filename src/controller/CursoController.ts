@@ -34,6 +34,12 @@ export class CursoController implements ICursoRepository {
     return cursoEncontrado;
   }
 
+  buscarPorNome(nome: string): Curso[] {
+    return this.cursos.filter((curso) =>
+      curso.nome.toLowerCase().includes(nome.toLowerCase())
+    );
+  }
+
   cadastrar(curso: Curso): void {
     this.cursos.push(curso);
     console.log("\nCurso cadastrado com sucesso.\n");
@@ -54,6 +60,46 @@ export class CursoController implements ICursoRepository {
     this.cursos[indice] = cursoAtualizado;
     console.log(
       `\nCurso com id ${cursoAtualizado.id} atualizado com sucesso.\n`
+    );
+  }
+
+  aplicarDesconto(id: number, percentual: number): void {
+    const curso = this.buscarPorId(id);
+
+    if (!curso) {
+      console.log("Curso não encontrado.");
+      return;
+    }
+
+    if (percentual <= 0 || percentual >= 100) {
+      console.log("Percentual de desconto inválido.");
+      return;
+    }
+
+    const valorDesconto = (curso.preco * percentual) / 100;
+    curso.preco = curso.preco - valorDesconto;
+
+    console.log(`Desconto de ${percentual}% aplicado com sucesso.`);
+    curso.visualizar();
+  }
+
+  relatorio(): void {
+    console.log("\nRelatório de cursos\n");
+
+    console.log(`Quantidade de cursos: ${this.cursos.length}`);
+
+    if (this.cursos.length === 0) {
+      return;
+    }
+
+    const somaPrecos = this.cursos.reduce(
+      (total, curso) => total + curso.preco,
+      0
+    );
+
+    console.log(`Soma dos preços: R$ ${somaPrecos.toFixed(2)}`);
+    console.log(
+      `Preço médio: R$ ${(somaPrecos / this.cursos.length).toFixed(2)}`
     );
   }
 
