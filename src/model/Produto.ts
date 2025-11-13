@@ -1,5 +1,3 @@
-// src/model/Produto.ts
-
 export abstract class Produto {
   protected id: number;
   protected nome: string;

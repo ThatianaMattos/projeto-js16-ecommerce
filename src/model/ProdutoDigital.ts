@@ -33,8 +33,6 @@ export class ProdutoDigital extends Produto {
     console.log(`Preço: ${this.preco}`);
     console.log(`Nível: ${this.nivel}`);
     console.log(`Estoque: ${this.estoque}`);
-    console.log(
-      `Disponível: ${this.disponivel ? "Sim" : "Não"}`
-    );
+    console.log(`Disponível: ${this.disponivel ? "Sim" : "Não"}`);
   }
 }
